@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #abc8ff;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    background-color: #b4e7ff;
+    width: 94%;
+    max-width: 850px;
+    padding: 24px 45px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: #001989;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+#imagemCofre {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 20px 0;
+    transition: transform 0.5s;
+}
+
+.tentativas {
+    margin: 5px 0 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #001989;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #001989;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: #001989;
+    transform: scale(1.03);
+}
+
+#mensagem {
+    margin: 10px 0;
+    min-height: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#botaoReiniciar {
+    background-color:#001989;
+    color: white;
+}
+
+#botaoReiniciar:hover {
+    background-color: #001989;
+}
+
+.alerta {
+    animation: piscar 0.8s infinite alternate;
+}
+
+@keyframes piscar {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.4;
+    }
+}
+
+@keyframes abrirCofre {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.overview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 55vh;
+    z-index: 10;
+}
+
+.caixa-sucesso {
+    background-color: #5a6cbc;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid #001989;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.caixa-sucesso h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.caixa-sucesso p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 25px;
+    }
+
+    #imagemCofre {
+        width: 230px;
+        height: 230px;
+    }
+
+    .caixa-sucesso {
+        padding: 30px;
+    }
+
+}

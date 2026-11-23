@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> COFRE </title>
+  <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+    <main class="container">
+        <h1>Cofre da Isabela</h1>
+        <img 
+            src="imagens/cofre-fechado.png" 
+            id="imagemCofre" 
+            alt="Cofre fechado"
+        >
+        <p class="tentativas" id="contador">
+            Tentativas restantes: 7
+        </p>
+        <input 
+            type="text" 
+            id="numero" 
+            placeholder="Digite um número de 1 a 50"
+            min="1"
+            max="50"
+        >
+        <button id="botaoTentar" onclick="verificarSenha()">
+            Abrir
+        </button>
+        <p id="mensagem">Esperando tentativas</p>
+        <button id="botaoReiniciar" onclick="reiniciarJogo()">
+            Reiniciar
+        </button>
+    </main>
+    <div id="overview" class="overview">
+        <div class="caixa-sucesso">
+            <h2>Cofre desbloqueado!</h2>
+            <p id="mensagemSucesso"></p>
+            <button onclick="reiniciarJogo()">
+                Tentar novamente
+            </button>
+        </div>
+    </div>
+  <script src="js/script.js"></script>
+ </body>
+</html>
